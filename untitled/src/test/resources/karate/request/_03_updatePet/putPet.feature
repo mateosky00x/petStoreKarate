@@ -7,9 +7,8 @@ Feature: Service client PUT
     * url url
 
   Scenario: check the service PUT Method
-    * def requestPut = read('classpath:karate/request/requestPut.json')
-    * def responsePut = read('classpath:karate/request/responseGet.json')
-
+    * def requestPut = read('classpath:karate/request/_03_updatePet/requestUpdate.json')
+    * def responsePut = read('classpath:karate/request/_03_updatePet/responseUpdate.json')
 
     Given path 'pet'
     And request requestPut
@@ -27,7 +26,7 @@ Feature: Service client PUT
 
   Scenario Outline: Update a pet with invalid status values
     * def idPet = '<id>'
-    * def responsePut = read('classpath:karate/request/responseErrorPost.json')
+    * def responsePut = read('classpath:karate/request/_03_updatePet/responseErrorUpdate.json')
 
     Given path 'pet'
     And request

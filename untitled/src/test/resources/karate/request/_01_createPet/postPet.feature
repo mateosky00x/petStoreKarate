@@ -7,8 +7,8 @@ Feature: Service client POST
     * url url
 
   Scenario: check the service POST Method
-    * def requestPost = read('classpath:karate/request/requestPost.json')
-    * def responsePost = read('classpath:karate/request/responsePost.json')
+    * def requestPost = read('classpath:karate/request/_01_createPet/requestPost.json')
+    * def responsePost = read('classpath:karate/request/_01_createPet/responsePost.json')
 
     Given path 'pet'
     And request requestPost
@@ -26,7 +26,7 @@ Feature: Service client POST
 
   Scenario Outline: Post a pet with invalid status values
     * def idPet = '<status>'
-    * def responsePost = read('classpath:karate/request/responsePost.json')
+    * def responsePost = read('classpath:karate/request/_01_createPet/responsePost.json')
 
     Given path 'pet'
     And request

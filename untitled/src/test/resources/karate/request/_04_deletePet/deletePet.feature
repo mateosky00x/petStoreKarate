@@ -7,9 +7,9 @@ Feature: Service client POST
     * url url
 
   Scenario: Delete a pet by id
-    * def responseDelete = read('classpath:karate/request/responseErrorPost.json')
-    * def requestDelete = read ('classpath:karate/request/requestDelete.json')
-    Given path 'pet','123'
+    * def responseDelete = read('classpath:karate/request/_04_deletePet/responseDelete.json')
+    * def requestDelete = read ('classpath:karate/request/_04_deletePet/requestDelete.json')
+    Given path 'pet','4595'
     When  method delete
     Then status 200
     And match response == responseDelete
@@ -19,7 +19,7 @@ Feature: Service client POST
     * def idPet = '<id>'
 
     Given path 'pet',idPet
-    When method Delete
+    When method delete
     Then status <code>
     And match response == <expected>
 

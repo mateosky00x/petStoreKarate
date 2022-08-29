@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1345,
+    "username": "mateoTester",
+    "firstName": "Mateo",
+    "lastName": "Castillo",
+    "email": "mateocastillo64@gmail.com",
+    "password": "thisistheway",
+    "phone": "string",
+    "userStatus": 1
+  }
+]

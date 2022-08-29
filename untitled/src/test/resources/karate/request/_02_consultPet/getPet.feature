@@ -8,8 +8,8 @@ Feature: Service pet get
 
 
   Scenario: Filter a pet by id
-    * def responseGet = read('classpath:karate/request/responseGet.json')
-    * def requestGet = read ('classpath:karate/request/requestPost.json')
+    * def responseGet = read('classpath:karate/request/_02_consultPet/responseGet.json')
+    * def requestGet = read ('classpath:karate/request/_02_consultPet/requestGetUser.json')
       Given path 'pet','4595'
       When  method get
       Then status 200
@@ -24,7 +24,7 @@ Feature: Service pet get
 
   Scenario Outline: Get a pet with invalid id values
     * def idPet = '<id>'
-    * def responseErrorGet = read ('classpath:karate/request/responseErrorGet.json')
+    * def responseErrorGet = read ('classpath:karate/request/_02_consultPet/responseErrorGet.json')
 
     Given path 'pet', idPet
     When method get
